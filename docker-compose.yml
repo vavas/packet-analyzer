@@ -1,0 +1,10 @@
+version: "2"
+services:
+  go-parser:
+    image: golang:1.12.5
+    volumes:
+    - .:/go/src/github.com/vavas/packet-analyzer
+    working_dir: /go/src/github.com/vavas/packet-analyzer
+    command: ./dist/packet-analyzer
+    expose:
+    - 80
